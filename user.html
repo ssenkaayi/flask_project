@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+<div class="container">
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+
+                {{message}}
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+    <h1> user info </h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>User_id</th>
+            <th>User_name</th>
+            <th>Password</th>
+        </tr>
+        {% for row in users %}
+        <tr class="active">
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+        </tr>
+
+        {% endfor %}
+
+
+    </table>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+       {% for msg in messages %}
+           <div class="container">
+
+              <p>{{msg}}</p>
+
+
+           </div>
+
+       {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+<div class="container">
+
+    <h1> hello {{session['name']}} wellcome back</h1>
+
+
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1> create account </h1>
+
+    <form action="{{url_for('insert')}}" method="POST" >
+
+        <div class="form-group">
+            <label for="name">User_name:</label>
+            <input type="text" class="form-control" name='name' id="name" required = '1'>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" name = 'password' id="pwd" required = '1'>
+        </div>
+
+        <button type="submit" class="btn btn-default">Sign_up</button>
+    </form>
+
+</div>
+
+
+{% endblock %}
